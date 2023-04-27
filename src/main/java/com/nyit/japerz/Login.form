@@ -59,7 +59,6 @@
             <properties>
               <background color="-14277338"/>
               <font name="Microsoft YaHei UI" style="0"/>
-              <foreground color="-131585"/>
               <text value="About"/>
             </properties>
           </component>
@@ -135,7 +134,9 @@
           </component>
           <vspacer id="f51dc">
             <constraints>
-              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="2" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                <minimum-size width="8" height="8"/>
+              </grid>
             </constraints>
           </vspacer>
           <vspacer id="d8ad5">

@@ -16,7 +16,7 @@ class Database {
             connection = DriverManager.getConnection("jdbc:mysql://localhost/openFloor_db?serverTimezone=EST", DatabaseUserName, DatabasePassword);
             System.out.println("[INFO] Connected to Database " + DatabaseUserName + "!");
         } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, "Unable to establish connection with the JM Bank server, please contact the bank employee. Error Code: N-001", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Unable to establish connection with chat database, please contact admin. Error Code: N-001", "Error", JOptionPane.ERROR_MESSAGE);
             System.out.println("[ERROR] Cannot connect to Database " + DatabaseUserName + "! Please check the error message below!");
             ex.printStackTrace();
         }

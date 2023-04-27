@@ -104,6 +104,8 @@ public class Login extends JFrame{
                     // Login successful
                     JOptionPane.showMessageDialog(null, "Login successful!");
                     System.out.println("[INFO] User " + username + " logged in! Password correct and encrypted.");
+                    ChatRoom chatRoom = new ChatRoom();
+                    dispose();
 
                 } else {
                     // Incorrect password
@@ -138,5 +140,15 @@ public class Login extends JFrame{
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    //Get the username pass through
+    public static String getUsernamePT() {
+        return usernamePT;
+    }
+
+    //Get the password after hashing operation pass through
+    public static String getPasswordPT() {
+        return passwordPT;
     }
 }
