@@ -29,6 +29,12 @@
             <systemPath>${project.basedir}/src/main/resources/rs2xml.jar</systemPath>
         </dependency>
 
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.11.0</version>
+        </dependency>
+
     </dependencies>
 
 </project>
