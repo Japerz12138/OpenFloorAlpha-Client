@@ -155,13 +155,13 @@
                   </component>
                 </children>
               </scrollpane>
-              <component id="25921" class="javax.swing.JButton" binding="imageButton">
+              <component id="25921" class="javax.swing.JButton" binding="filesButton">
                 <constraints>
                   <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
                   <font name="Microsoft YaHei UI" size="16" style="0"/>
-                  <text value="Image"/>
+                  <text value="Files"/>
                 </properties>
               </component>
               <component id="e7ed8" class="javax.swing.JButton" binding="sendButton" default-binding="true">
@@ -209,12 +209,7 @@
             </constraints>
             <properties>
               <font name="Microsoft YaHei UI" size="14" style="0"/>
-              <model>
-                <item value="OK"/>
-                <item value="OK"/>
-                <item value="OK"/>
-                <item value="OK"/>
-              </model>
+              <model/>
             </properties>
           </component>
           <vspacer id="3d389">
