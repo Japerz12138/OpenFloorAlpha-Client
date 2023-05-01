@@ -1,8 +1,10 @@
 package com.nyit.japerz;
 
-import com.nyit.japerz.utils.FileSender;
+import com.nyit.japerz.utils.*;
+
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
@@ -25,6 +27,9 @@ public class ChatRoom extends JFrame{
     private JTextArea sendingTA;
     private JButton sendButton;
     private JButton filesButton;
+    private JTabbedPane tabbedPane1;
+    private JTable tableFile;
+    private JTable table;
 
     private Socket socket;
     private BufferedReader reader;
@@ -35,6 +40,11 @@ public class ChatRoom extends JFrame{
 
     private String nickname = getNickname();
 
+    public String[] filename;
+    public byte[] filedata;
+
+    private static String[] fileNamePT;
+    private static byte[] fileDataPT;
 
 
     public ChatRoom() {
@@ -139,9 +149,16 @@ public class ChatRoom extends JFrame{
                                 updateOnlineUserList(onlineUsers);
                                 onlineCounts.setText(onlineUsers.size()+1 + " Online");
                             });
-                        }else if (message.startsWith("quit ")){
+                        }else if (message.startsWith("quit ")) {
                             onlineUsers.remove(nickname);
-                            onlineCounts.setText(onlineUsers.size()+1 + " Online");
+                            onlineCounts.setText(onlineUsers.size() + 1 + " Online");
+                        }else if (message.startsWith("file ")) {
+                            filename = message.substring(5).split(",");
+                            fileNamePT = filename;
+                            filedata = getFileData();
+                            chatTA.append("<html>" + new String(filedata) + "</html>");
+                            fileDataPT = filedata;
+
                         } else {
                             SwingUtilities.invokeLater(() -> {
                                 chatTA.append(message + "\n");
@@ -149,6 +166,7 @@ public class ChatRoom extends JFrame{
                         }
                     }
                 }
+
             } catch (IOException ex) {
                 Logger.getLogger(ChatRoom.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -178,6 +196,45 @@ public class ChatRoom extends JFrame{
         }
     }
 
+    public byte[] getFileData() {
+        try {
+            socket = new Socket(hostName, port);
+            BufferedInputStream in = new BufferedInputStream(socket.getInputStream());
+            // Read the byte data from the input stream and store it in a byte array.
+            byte[] buffer = new byte[1024];
+            int bytesRead = in.read(buffer);
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+
+            while (bytesRead != -1) {
+                baos.write(buffer, 0, bytesRead);
+                bytesRead = in.read(buffer);
+            }
+            byte[] fileContentBytes = baos.toByteArray();
+
+            return fileContentBytes;
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        return new byte[0];
+    }
+
+    public static String getFileExtension(String fileName) {
+        int i = fileName.lastIndexOf('.');
+
+        if (i > 0) {
+            return fileName.substring(i+1);
+        } else {
+            return "No extension founded.";
+        }
+    }
+
+    private void createTable() {
+        tableFile.setModel(new DefaultTableModel(
+                null,
+                new String[]{"File No.", "File Name", "Size", "Status"}
+        ));
+    }
+
     private void updateOnlineUserList(List<String> onlineUsers) {
         onlineCounts.setText(onlineUsers.size() + " Online");
 
@@ -188,19 +245,11 @@ public class ChatRoom extends JFrame{
         onlineUserList.setModel(listModel);
     }
 
-    private int saveImageToDatabase(byte[] imageBytes) {
-        try{
-            Connection connection = Database.connection; // Connect to database
-            PreparedStatement stm = connection.prepareStatement("INSERT INTO images (image_data) VALUES (?), Statement.RETURN_GENERATED_KEYS"); // Create statement
-            stm.setBytes(1, imageBytes);
-            stm.executeUpdate();
-            ResultSet rs = stm.getGeneratedKeys();
-            if (rs.next()) {
-                return rs.getInt(1);
-            }
-        } catch (SQLException e) {
-            System.out.println("Error saving image to database: " + e.getMessage());
-        }
-        return -1;
+    public static String[] getfileName() {
+        return fileNamePT;
+    }
+
+    public static byte[] getfiledata() {
+        return fileDataPT;
     }
 }

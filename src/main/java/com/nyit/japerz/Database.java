@@ -21,5 +21,4 @@ class Database {
             ex.printStackTrace();
         }
     }
-
 }

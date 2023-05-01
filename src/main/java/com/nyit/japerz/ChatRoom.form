@@ -103,145 +103,6 @@
           </component>
         </children>
       </grid>
-      <grid id="c1cbc" layout-manager="GridLayoutManager" row-count="4" column-count="8" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-        <margin top="0" left="0" bottom="0" right="0"/>
-        <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties/>
-        <border type="none"/>
-        <children>
-          <grid id="37075" layout-manager="GridLayoutManager" row-count="2" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-            <margin top="0" left="0" bottom="0" right="0"/>
-            <constraints>
-              <grid row="1" column="2" row-span="1" col-span="5" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties/>
-            <border type="none"/>
-            <children>
-              <scrollpane id="3c720">
-                <constraints>
-                  <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                    <minimum-size width="-1" height="50"/>
-                  </grid>
-                </constraints>
-                <properties/>
-                <border type="none"/>
-                <children>
-                  <component id="f731a" class="javax.swing.JTextArea" binding="sendingTA">
-                    <constraints/>
-                    <properties>
-                      <font name="Microsoft YaHei UI" size="14" style="0"/>
-                      <lineWrap value="true"/>
-                      <text value=""/>
-                      <wrapStyleWord value="true"/>
-                    </properties>
-                  </component>
-                </children>
-              </scrollpane>
-              <scrollpane id="3147a">
-                <constraints>
-                  <grid row="0" column="0" row-span="1" col-span="4" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties/>
-                <border type="none"/>
-                <children>
-                  <component id="fc55d" class="javax.swing.JTextArea" binding="chatTA">
-                    <constraints/>
-                    <properties>
-                      <editable value="false"/>
-                      <font name="Microsoft YaHei UI" size="16" style="0"/>
-                    </properties>
-                  </component>
-                </children>
-              </scrollpane>
-              <component id="25921" class="javax.swing.JButton" binding="filesButton">
-                <constraints>
-                  <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <font name="Microsoft YaHei UI" size="16" style="0"/>
-                  <text value="Files"/>
-                </properties>
-              </component>
-              <component id="e7ed8" class="javax.swing.JButton" binding="sendButton" default-binding="true">
-                <constraints>
-                  <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <font name="Microsoft YaHei UI" size="16" style="0"/>
-                  <text value="Send"/>
-                </properties>
-              </component>
-            </children>
-          </grid>
-          <component id="9f7ad" class="javax.swing.JLabel">
-            <constraints>
-              <grid row="0" column="1" row-span="1" col-span="5" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <font name="Microsoft YaHei UI" size="14" style="0"/>
-              <text value="Online:"/>
-            </properties>
-          </component>
-          <component id="15d5" class="javax.swing.JLabel">
-            <constraints>
-              <grid row="3" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <font name="Microsoft YaHei UI" size="14" style="0"/>
-              <text value="Currently Online:"/>
-            </properties>
-          </component>
-          <hspacer id="335e7">
-            <constraints>
-              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
-                <minimum-size width="15" height="15"/>
-              </grid>
-            </constraints>
-          </hspacer>
-          <component id="f30ef" class="javax.swing.JList" binding="onlineUserList">
-            <constraints>
-              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="0" anchor="8" fill="2" indent="0" use-parent-layout="false">
-                <preferred-size width="100" height="-1"/>
-                <maximum-size width="100" height="-1"/>
-              </grid>
-            </constraints>
-            <properties>
-              <font name="Microsoft YaHei UI" size="14" style="0"/>
-              <model/>
-            </properties>
-          </component>
-          <vspacer id="3d389">
-            <constraints>
-              <grid row="2" column="2" row-span="1" col-span="3" vsize-policy="0" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
-                <minimum-size width="10" height="10"/>
-              </grid>
-            </constraints>
-          </vspacer>
-          <component id="4d682" class="javax.swing.JLabel" binding="onlineCounts">
-            <constraints>
-              <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <font name="Microsoft YaHei UI" size="14" style="0"/>
-              <text value="0"/>
-            </properties>
-          </component>
-          <hspacer id="b5ce7">
-            <constraints>
-              <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-            </constraints>
-          </hspacer>
-          <hspacer id="3778b">
-            <constraints>
-              <grid row="1" column="7" row-span="1" col-span="1" vsize-policy="1" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
-                <minimum-size width="15" height="15"/>
-              </grid>
-            </constraints>
-          </hspacer>
-        </children>
-      </grid>
       <vspacer id="7d425">
         <constraints>
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
@@ -250,6 +111,232 @@
           </grid>
         </constraints>
       </vspacer>
+      <tabbedpane id="ba70d" binding="tabbedPane1" default-binding="true">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="200" height="200"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Microsoft YaHei UI" style="0"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="c1cbc" layout-manager="GridLayoutManager" row-count="4" column-count="8" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <tabbedpane title="Chat"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <grid id="37075" layout-manager="GridLayoutManager" row-count="2" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="1" column="2" row-span="1" col-span="5" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <scrollpane id="3c720">
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="-1" height="50"/>
+                      </grid>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="f731a" class="javax.swing.JTextArea" binding="sendingTA">
+                        <constraints/>
+                        <properties>
+                          <font name="Microsoft YaHei UI" size="14" style="0"/>
+                          <lineWrap value="true"/>
+                          <text value=""/>
+                          <wrapStyleWord value="true"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </scrollpane>
+                  <scrollpane id="3147a">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="4" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="fc55d" class="javax.swing.JTextArea" binding="chatTA">
+                        <constraints/>
+                        <properties>
+                          <editable value="false"/>
+                          <font name="Microsoft YaHei UI" size="16" style="0"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </scrollpane>
+                  <component id="25921" class="javax.swing.JButton" binding="filesButton">
+                    <constraints>
+                      <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <font name="Microsoft YaHei UI" size="16" style="0"/>
+                      <text value="Files"/>
+                    </properties>
+                  </component>
+                  <component id="e7ed8" class="javax.swing.JButton" binding="sendButton" default-binding="true">
+                    <constraints>
+                      <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <font name="Microsoft YaHei UI" size="16" style="0"/>
+                      <text value="Send"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <component id="9f7ad" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="5" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Microsoft YaHei UI" size="14" style="0"/>
+                  <text value="Online:"/>
+                </properties>
+              </component>
+              <component id="15d5" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="3" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Microsoft YaHei UI" size="14" style="0"/>
+                  <text value="Currently Online:"/>
+                </properties>
+              </component>
+              <hspacer id="335e7">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                    <minimum-size width="15" height="15"/>
+                  </grid>
+                </constraints>
+              </hspacer>
+              <component id="f30ef" class="javax.swing.JList" binding="onlineUserList">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="0" anchor="8" fill="2" indent="0" use-parent-layout="false">
+                    <preferred-size width="100" height="-1"/>
+                    <maximum-size width="100" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <font name="Microsoft YaHei UI" size="14" style="0"/>
+                  <model/>
+                </properties>
+              </component>
+              <vspacer id="3d389">
+                <constraints>
+                  <grid row="2" column="2" row-span="1" col-span="3" vsize-policy="0" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                    <minimum-size width="10" height="10"/>
+                  </grid>
+                </constraints>
+              </vspacer>
+              <component id="4d682" class="javax.swing.JLabel" binding="onlineCounts">
+                <constraints>
+                  <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Microsoft YaHei UI" size="14" style="0"/>
+                  <text value="0"/>
+                </properties>
+              </component>
+              <hspacer id="b5ce7">
+                <constraints>
+                  <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <hspacer id="3778b">
+                <constraints>
+                  <grid row="1" column="7" row-span="1" col-span="1" vsize-policy="1" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                    <minimum-size width="15" height="15"/>
+                  </grid>
+                </constraints>
+              </hspacer>
+            </children>
+          </grid>
+          <grid id="778a8" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <tabbedpane title="Send Files"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <scrollpane id="5f749">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="4e4b1" class="javax.swing.JTable" binding="table">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                </children>
+              </scrollpane>
+            </children>
+          </grid>
+          <grid id="3ed6e" layout-manager="GridLayoutManager" row-count="4" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <tabbedpane title="Files"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <hspacer id="e3268">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                    <minimum-size width="15" height="15"/>
+                  </grid>
+                </constraints>
+              </hspacer>
+              <hspacer id="88f42">
+                <constraints>
+                  <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                    <minimum-size width="15" height="15"/>
+                  </grid>
+                </constraints>
+              </hspacer>
+              <vspacer id="45b32">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                    <minimum-size width="15" height="15"/>
+                  </grid>
+                </constraints>
+              </vspacer>
+              <vspacer id="df973">
+                <constraints>
+                  <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                    <minimum-size width="15" height="15"/>
+                  </grid>
+                </constraints>
+              </vspacer>
+              <scrollpane id="8481c">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="77423" class="javax.swing.JTable" binding="tableFile">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                </children>
+              </scrollpane>
+            </children>
+          </grid>
+        </children>
+      </tabbedpane>
     </children>
   </grid>
 </form>
